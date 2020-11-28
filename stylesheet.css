@@ -1,0 +1,817 @@
+*{
+    scroll-behavior: smooth;
+}
+
+/* scroll bar */
+html {
+  --scrollbarBG: grey;
+  --thumbBG: black;
+}
+body::-webkit-scrollbar {
+  width: 16px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+/* End of scrollbar */
+.background {
+    background-image: url(img/banner.jpg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    background-size: cover;
+    z-index: 1;
+}
+
+.header .navbar {
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    top: 0px;
+    text-align: center;
+    transition: .5s;
+    display: block; 
+    z-index: 1;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 50px;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .5s;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.navbar ul li > a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar ul li > a:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #ffffff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all .3s ease-in-out 0s;
+}
+
+.navbar ul li:hover > a:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.navbar ul li:first-child{
+    padding-left: 0px;
+}
+
+.navbar ul li:first-child img{
+    width: 200px;
+}
+
+.navbar ul li:first-child:hover{
+    background: transparent;
+    
+}
+
+.navbar ul#navword {
+    margin: -30px;
+}
+
+.navbar#nav {
+    padding: 0px;
+}
+/* End of header */
+
+/* Footer */
+.footer {
+    background-color: #2B2D2F;
+    width: 100%;
+    background-size: cover;
+    padding: 20px 0 20px 0;
+}
+
+.footer .col-3 {
+    color: white;
+}
+
+.footer .col-3 h4{
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.footer .col-3:nth-child(4) {
+    font-size: 16px;
+}
+
+.footer .col-3 ul li {
+    list-style: none;
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer .col-3 ul li a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.footer .col-3 ul li a:hover {
+    color: white;
+}
+
+.footer .col-3 ul li > a:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #ffffff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all .3s ease-in-out 0s;
+}
+
+.footer .col-3 ul li:hover a:before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.footer #topBtn {
+    background-color: #d5d5d5;
+    border: none;
+    color: black;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 4px 5px 3px #101010;
+    float: right;
+    margin: 120px 30px 0 0;
+}
+
+.footer .col-3:nth-child(4) table {
+    color: white;
+    font-size: 16px;
+}
+
+
+.footer .col-3:nth-child(4) table td > i {
+    padding: 0 20px;
+}
+
+.footer .col-3:nth-child(4) table td:nth-child(2) {
+    padding: 0 20px;
+}
+ 
+.footer .col-3:nth-child(4) table td {
+    padding-bottom: 10px;
+}
+
+.footer .copyright {
+    color: white;
+    font-size: 16px;
+}
+
+.footer > .container > .row {
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+/* End of Footer */
+
+/* Homepage */
+#myVideo {
+    display: block;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.box {
+    width: 100%;
+}
+
+
+.main-content .box.homepage1 {
+    height: 550px;
+    display: flex;
+}
+
+.slogan {
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, 0) !important;
+    font-size: 68px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.homepage1 .col-4 img.coffeeimg {
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.homepage1 .col-4 h1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 86px;
+    color: #F2EDD7FF;
+    font-weight: bold;
+    font-family: Merriweather;
+    text-shadow: 35px 35px 4px #1e1e1e;
+}
+
+.homepage1 .col-4:nth-child(3) span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #F2EDD7FF;
+    font-family: 'Itim', cursive;
+    text-shadow: 25px 20px 4px #1e1e1e;
+}
+
+.homepage1 .col-4 {
+    margin: 0px 15px 0px 15px;
+}
+
+.homepage1 .col-4:first-child {
+    padding-left: 50px;
+}
+
+.main-content .row , .video .row, .second-content{
+    display: block;
+    flex-wrap: nowrap;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.coffeeBG {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    transform: translate(0px, -350px);
+    height: 1000px;
+    filter: brightness(0.45) blur(3px);
+}
+
+.container.main-content.secondrow {
+    max-width: 100%;
+    height: 70%;
+    background-image: url(img/background/bgCoffee3.jpg);
+    background-size: cover;
+}
+
+.secondrow .homepage2 .circle {
+    transform: translate(0, 13%);
+    width: 30%;
+    height: 79%;
+    background: #fff;
+    margin: auto;
+    border-radius: 100%;
+    padding: 7% 2%;
+    text-align: center;
+    box-shadow: 10px 10px 20px #000;
+}
+
+.secondrow .homepage2 .circle > a{
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.secondrow .homepage2 .circle > a:before, .secondrow .homepage2 .circle >a:after {
+    content: "\2014";
+    
+}
+
+.secondrow .homepage2 .circle > h1 , .secondrow .homepage2 .circle > p , .secondrow .homepage2 .circle > a{
+    color: #6f4e37;
+    
+}
+
+.secondrow .homepage2 .circle > h1 , .secondrow .homepage2 .circle > p, .secondrow .homepage2 .circle > a {
+    font-family: 'Merriweather', serif;
+}
+
+.secondrow .homepage2 .circle > h1 {
+    font-size: 40px;
+    font-weight: 900;
+    padding-bottom: 15px;
+}
+
+.secondrow .homepage2 .circle > p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    color: #948583;
+}
+
+.container.main-content.thirdrow {
+    max-width: 100%;
+    height: 70%;
+    background-image: url(img/background/coffeetable.jpg);
+    background-position: center;
+    background-size: cover;
+    transform: translate(0px, 0px);
+}
+
+.thirdrow .row .box{
+  position: relative;
+}
+
+.thirdrow .row .box > span {
+    color: black;
+    font-size: 36px;
+    font-weight: 600;
+    align-content: center;
+    font-family: 'Josefin Sans', sans-serif;
+    position: absolute;
+    left: 35%;
+    top: 240px;
+    background-color: rgba(255,255,255, 0.4);
+    padding: 20px;
+    display: block;
+}
+
+.thirdrow .row .box span > a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Merriweather', serif;
+    display: block;
+    text-align: right;
+    padding-top: 30px;
+    padding-left: 410px;
+}
+
+.thirdrow .row .box span > a:after {
+    content: "\2014";
+}
+
+/* End of homepage */
+
+/* About Us */
+.aboutus img.banner {
+    max-width: 100%;
+    max-height: 80%;
+}
+
+.aboutus .box .col-12 {
+    display: flex;
+    padding: 0px 0px;
+}
+
+.aboutus .firstrow .box .col-12 .col-6:nth-child(1){
+    padding-left: 0px;
+    padding-right: 15px;
+}
+.aboutus .firstrow .box .col-12 .col-6:nth-child(2){
+    padding-right: 0px;
+    padding-left: 15px;
+}
+
+.aboutus h1 {
+    font-family: Merriweather;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #6f4e37;
+}
+
+.aboutus p {
+    font-size: 18px;
+    color: #948583;
+    font-family: Josefin Sans;
+}
+
+.aboutus ol li {
+    font-size: 18px;
+    color: #948583;
+    font-family: Josefin Sans;
+}
+
+.aboutus.container {
+    height: 650px;
+}
+
+.aboutus .row.vnmimg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    display: flex;
+}
+
+.aboutus .row.vnmimg .col-4 {
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+    position: absolute;
+}
+
+.aboutus .row.vnmimg .col-4:nth-child(1) {
+    left: 0px;
+}
+
+.aboutus .row.vnmimg .col-4:nth-child(2) {
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.aboutus .row.vnmimg .col-4:nth-child(3) {
+    right: 0px;
+}
+
+.aboutus .ourstory .espresso {
+    width: 274px;
+    position: absolute;
+    margin-left: -361px;
+    margin-top: -50px;
+    transform: rotate(-14deg) !important;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    z-index: 1;
+}
+
+.aboutus .ourstory .espresso2 {
+    width: 300px;
+    position: absolute;
+    margin-left: 604px;
+    transform: rotate(9deg) !important;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.aboutus .ourstory .espresso3 {
+    width: 220px;
+    position: absolute;
+    margin-left: -280px;
+    margin-top: 215px;
+    transform: rotate(13deg) !important;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* About Coffee */
+.aboutcoffee img.banner {
+    width: 100%;
+    height: 50%;
+}
+
+.aboutcoffee .abt-coffee-content-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.aboutcoffee .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.aboutcoffee .active, .aboutcoffee .accordion:hover {
+    background-color: #000000FF; 
+}
+
+.aboutcoffee .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-bottom: 0px;
+}
+
+.aboutcoffee .accordion:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.aboutcoffee .active:after {
+  content: "\2212";
+}
+
+.aboutcoffee .didyouknow > .box {
+    padding-bottom: 30px;
+}
+
+.aboutcoffee .didyouknow .box > h1 {
+    font-family: Merriweather;
+    font-size: 38px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #6f4e37;
+}
+
+.aboutcoffee .didyouknow .box .accordion {
+    font-size: 18px;
+    color: #FFFFFFFF;
+    font-family: Merriweather;
+    background-color: #000000FF;
+    font-weight: 700;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.aboutcoffee .didyouknow .box .panel {
+    font-size: 18px;
+    color: #ffffff;
+    font-family: Josefin Sans;
+    background-color: #222222;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.aboutcoffee .didyouknow .box .panel > p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Privacy & Policy */
+.privacyandpolicy img.banner {
+    width: 100%;
+    height: 50%;
+}
+
+.privacyandpolicy .privacycontent {
+    margin: 35px;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    padding: 20px;
+}
+
+.privacyandpolicy .privacycontent h1 {
+    font-size: 46px;
+    font-weight: 800;
+    font-family: Merriweather;
+    color: #6f4e37;
+}
+
+.privacyandpolicy .privacycontent h2 {
+    font-weight: 700;
+    color: #6f4e37;
+}
+
+.privacyandpolicy .privacycontent p, .privacyandpolicy .privacycontent ul li {
+    font-size: 16px;
+    font-family: Josefin Sans;
+    color: #948583;
+}
+
+/* FaQ */
+.faq img.banner {
+    width: 100%;
+    height: 80%;
+    margin-top: -260px;
+}
+
+.faq .row.frequentlyaskedquestion {
+    display: flex;
+}
+
+.faqleft ol li:before {
+    content: '\21FE';
+    margin-left: -36px;
+    margin-right: 20px;
+}
+
+.faqleft ol {
+    font-size: 16px;
+}
+
+.faqright h2 {
+    font-size: 32px;
+    font-family: Merriweather;
+    font-weight: 600;
+    color: #6f4e37;
+}
+
+.faqright #answer1, .faqright #answer2, .faqright #answer3, .faqright #answer4, .faqright #answer5, .faqright #answer6, .faqright #answer7, .faqright #answer8 {
+    font-size: 18px;
+    font-family: Josefin Sans;
+    color: #948583;;
+} 
+
+.faq .frequentlyaskedquestion {
+    padding: 20px;
+}
+
+.faqleft > h2 {
+    font-size: 32px;
+    font-weight: 600;
+    font-family: Merriweather;
+    color: #6f4e37;
+}
+
+.faqleft ol, .faqleft ol li {
+    color: #948583;
+    font-family: Josefin Sans;
+}
+
+.faqright div[id^="question"]  {
+    padding-bottom: 20px;
+}
+/* End of FaQ */
+
+/* Contact Us */
+.contactus img.banner {
+    width: 100%;
+    height: 65%;
+    margin-top: -150px;
+}
+
+.contactus .row.contactusrow {
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    display: flex;
+    margin: 100px;
+}
+
+.contactus .contactusrow .col-6:first-child {
+    padding: 0px;
+}
+
+.contactus .contactusrow .col-6 img {
+    width: 100%;
+}
+
+.contactus .contactusrow .col-6:nth-child(2) h1 {
+    text-align: center;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    font-family: Merriweather;
+    font-weight: 600;
+    font-size: 32px;
+    color: #6f4e37;
+}
+
+.contactus .contactusrow .col-6:nth-child(2) input[type=text], .contactus .contactusrow .col-6:nth-child(2) input[type=number],
+.contactus .contactusrow .col-6:nth-child(2) select,
+.contactus .contactusrow .col-6:nth-child(2) input[type=email]{
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-family: Josefin Sans;
+    border-radius: 5px;
+    border: none;
+}
+.contactus .contactusrow .col-6:nth-child(2) textarea{
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    height: 200px;
+    font-family: Josefin Sans;
+    border-radius: 5px;
+    border: none;
+}
+
+.contactus .contactusrow .col-6:nth-child(2) input[type=submit] {
+    width: 100%;
+    height: 50px;
+    margin-top: 50px;
+    font-size: 16px;
+    border: none;
+    background-color: white;
+    font-weight: 600;
+    font-family: Merriweather;
+    border-radius: 10px;
+}
+
+.contactus .contactusrow .col-6:nth-child(2) input[type=submit]:hover {
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.contactus .contactusrow .col-6:nth-child(2) select option {
+    padding: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+/* End of Contact Us*/
+
+/* Reservation */
+.reservation img.banner {
+    width: 100%;
+    height: 50%;
+}
+
+.reservation .reservationrow .col-6:first-child img {
+    width: 100%;
+}
+
+.reservation .reservationrow {
+    display: flex;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    margin: 100px;
+}
+
+.reservation .reservationrow .col-6:first-child {
+    padding: 0px;
+}
+
+.reservation .reservationrow .col-6:nth-child(2) h1 {
+    text-align: center;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    font-family: Merriweather;
+    font-weight: 600;
+    font-size: 32px;
+    color: #6f4e37;
+}
+
+.reservation .reservationrow .col-6:nth-child(2) input[type=text], 
+.reservation .reservationrow .col-6:nth-child(2) input[type=number],
+.reservation .reservationrow .col-6:nth-child(2) input[type=email],
+.reservation .reservationrow .col-6:nth-child(2) input[type=date],
+.reservation .reservationrow .col-6:nth-child(2) input[type=time]{
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-family: Josefin Sans;
+    border-radius: 5px;
+    border: none;
+}
+
+.reservation .reservationrow .col-6:nth-child(2) input[type=submit] {
+    width: 100%;
+    height: 50px;
+    margin-top: 50px;
+    font-size: 16px;
+    border: none;
+    background-color: white;
+    font-weight: 600;
+    font-family: Merriweather;
+    border-radius: 10px;
+}
+
+.reservation .reservationrow .col-6:nth-child(2) input[type=submit]:hover {
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+::placeholder {
+    color: white;
+}
+
+
+/* End of Reservation */
